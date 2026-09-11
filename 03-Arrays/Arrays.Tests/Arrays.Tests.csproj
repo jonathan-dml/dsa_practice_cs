@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arrays.Exercises\Arrays.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueuesAndDeques.Exercises\QueuesAndDeques.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

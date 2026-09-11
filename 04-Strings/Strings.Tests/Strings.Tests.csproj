@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Strings.Exercises\Strings.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Recursion.Exercises\Recursion.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+<Solution>
+  <Folder Name="/01-Complexity/">
+    <Project Path="01-Complexity/Complexity.Exercises/Complexity.Exercises.csproj" />
+    <Project Path="01-Complexity/Complexity.Tests/Complexity.Tests.csproj" />
+  </Folder>
+  <Folder Name="/02-Recursion/">
+    <Project Path="02-Recursion/Recursion.Exercises/Recursion.Exercises.csproj" />
+    <Project Path="02-Recursion/Recursion.Tests/Recursion.Tests.csproj" />
+  </Folder>
+  <Folder Name="/03-Arrays/">
+    <Project Path="03-Arrays/Arrays.Exercises/Arrays.Exercises.csproj" />
+    <Project Path="03-Arrays/Arrays.Tests/Arrays.Tests.csproj" />
+  </Folder>
+  <Folder Name="/04-Strings/">
+    <Project Path="04-Strings/Strings.Exercises/Strings.Exercises.csproj" />
+    <Project Path="04-Strings/Strings.Tests/Strings.Tests.csproj" />
+  </Folder>
+  <Folder Name="/05-DynamicArray/">
+    <Project Path="05-DynamicArray/DynamicArray.Exercises/DynamicArray.Exercises.csproj" />
+    <Project Path="05-DynamicArray/DynamicArray.Tests/DynamicArray.Tests.csproj" />
+  </Folder>
+  <Folder Name="/06-LinkedLists/">
+    <Project Path="06-LinkedLists/LinkedLists.Exercises/LinkedLists.Exercises.csproj" />
+    <Project Path="06-LinkedLists/LinkedLists.Tests/LinkedLists.Tests.csproj" />
+  </Folder>
+  <Folder Name="/07-Stacks/">
+    <Project Path="07-Stacks/Stacks.Exercises/Stacks.Exercises.csproj" />
+    <Project Path="07-Stacks/Stacks.Tests/Stacks.Tests.csproj" />
+  </Folder>
+  <Folder Name="/08-QueuesAndDeques/">
+    <Project Path="08-QueuesAndDeques/QueuesAndDeques.Exercises/QueuesAndDeques.Exercises.csproj" />
+    <Project Path="08-QueuesAndDeques/QueuesAndDeques.Tests/QueuesAndDeques.Tests.csproj" />
+  </Folder>
+  <Folder Name="/09-HashTables/">
+    <Project Path="09-HashTables/HashTables.Exercises/HashTables.Exercises.csproj" />
+    <Project Path="09-HashTables/HashTables.Tests/HashTables.Tests.csproj" />
+  </Folder>
+  <Folder Name="/10-TwoPointersSlidingWindow/">
+    <Project Path="10-TwoPointersSlidingWindow/TwoPointersSlidingWindow.Exercises/TwoPointersSlidingWindow.Exercises.csproj" />
+    <Project Path="10-TwoPointersSlidingWindow/TwoPointersSlidingWindow.Tests/TwoPointersSlidingWindow.Tests.csproj" />
+  </Folder>
+  <Folder Name="/11-BinarySearch/">
+    <Project Path="11-BinarySearch/BinarySearch.Exercises/BinarySearch.Exercises.csproj" />
+    <Project Path="11-BinarySearch/BinarySearch.Tests/BinarySearch.Tests.csproj" />
+  </Folder>
+  <Folder Name="/12-Sorting/">
+    <Project Path="12-Sorting/Sorting.Exercises/Sorting.Exercises.csproj" />
+    <Project Path="12-Sorting/Sorting.Tests/Sorting.Tests.csproj" />
+  </Folder>
+  <Folder Name="/13-TreesAndBST/">
+    <Project Path="13-TreesAndBST/TreesAndBST.Exercises/TreesAndBST.Exercises.csproj" />
+    <Project Path="13-TreesAndBST/TreesAndBST.Tests/TreesAndBST.Tests.csproj" />
+  </Folder>
+  <Folder Name="/14-Heaps/">
+    <Project Path="14-Heaps/Heaps.Exercises/Heaps.Exercises.csproj" />
+    <Project Path="14-Heaps/Heaps.Tests/Heaps.Tests.csproj" />
+  </Folder>
+  <Folder Name="/15-Tries/">
+    <Project Path="15-Tries/Tries.Exercises/Tries.Exercises.csproj" />
+    <Project Path="15-Tries/Tries.Tests/Tries.Tests.csproj" />
+  </Folder>
+  <Folder Name="/16-Graphs/">
+    <Project Path="16-Graphs/Graphs.Exercises/Graphs.Exercises.csproj" />
+    <Project Path="16-Graphs/Graphs.Tests/Graphs.Tests.csproj" />
+  </Folder>
+  <Folder Name="/17-DynamicProgramming/">
+    <Project Path="17-DynamicProgramming/DynamicProgramming.Exercises/DynamicProgramming.Exercises.csproj" />
+    <Project Path="17-DynamicProgramming/DynamicProgramming.Tests/DynamicProgramming.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/DsaPractice.Testing/DsaPractice.Testing.csproj" />
+  </Folder>
+</Solution>

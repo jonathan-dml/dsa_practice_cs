@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Complexity.Exercises\Complexity.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

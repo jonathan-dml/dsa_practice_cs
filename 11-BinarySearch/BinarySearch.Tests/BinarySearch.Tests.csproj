@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BinarySearch.Exercises\BinarySearch.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

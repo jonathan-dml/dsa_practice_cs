@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TreesAndBST.Exercises\TreesAndBST.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>

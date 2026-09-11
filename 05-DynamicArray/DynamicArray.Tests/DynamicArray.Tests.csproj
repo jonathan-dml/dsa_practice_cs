@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicArray.Exercises\DynamicArray.Exercises.csproj" />
+  </ItemGroup>
+
+</Project>
