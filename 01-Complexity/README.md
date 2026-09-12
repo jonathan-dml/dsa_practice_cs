@@ -125,22 +125,83 @@ public RangeSumQuery(int[] numbers)
 public long SumRange(int left, int right)   // inclusive
 ```
 
-The constructor receives the data once; afterwards many `SumRange` queries are answered.
+Unlike Exercises 01 and 02, this one is a **class**, not a single static method. It's used in two steps:
 
-| numbers | Query | Output |
+```csharp
+var query = new RangeSumQuery([-2, 0, 3, -5, 2, -1]);  // 1. build it once with the data
+long a = query.SumRange(0, 2);                          // 2. then ask many questions
+long b = query.SumRange(2, 5);
+long c = query.SumRange(3, 3);
+```
+
+Each call to `SumRange(left, right)` asks: *"what is the sum of the elements from index `left` to index
+`right`, **including both ends**?"*
+
+#### Worked example
+
+```
+index:     0   1   2   3   4   5
+numbers: [-2,  0,  3, -5,  2, -1]
+```
+
+| Query | Elements included | Output |
 |---|---|---|
-| `[-2, 0, 3, -5, 2, -1]` | `SumRange(0, 2)` | `1` |
-| | `SumRange(2, 5)` | `-1` |
-| | `SumRange(0, 5)` | `-3` |
+| `SumRange(0, 2)` | indices 0, 1, 2 → `-2 + 0 + 3` | `1` |
+| `SumRange(2, 5)` | indices 2, 3, 4, 5 → `3 + (-5) + 2 + (-1)` | `-1` |
+| `SumRange(0, 5)` | the whole array | `-3` |
+| `SumRange(3, 3)` | only index 3 → `-5` | `-5` |
 
-- The constructor throws `ArgumentNullException` for `null`.
-- `SumRange` throws `ArgumentOutOfRangeException` when `left < 0`, `right >= length` or `left > right`.
-- **Target: O(n) constructor, O(1) per query.**
+#### So what's the catch?
 
-<details><summary>Hint</summary>
+The obvious version loops from `left` to `right` inside `SumRange` and adds things up. That's correct, but
+each query costs **O(n)**. The performance test builds an array of **200 000** elements and then calls
+`SumRange(0, n - 1)` **200 000 times**. That's 200 000 × 200 000 = 4 × 10¹⁰ additions, which is far too slow.
 
-Precompute `prefix[i] = numbers[0] + ... + numbers[i - 1]` (with `prefix[0] = 0`).
+The real task is to **do the heavy work once, in the constructor**, and keep what you learn in a field,
+so that every `SumRange` call only needs a couple of array lookups and no loop at all.
+
+This is the "trade memory for speed" idea from the learning goals: you store an extra array of size
+`n + 1` (O(n) space), and in return every query becomes O(1).
+
+#### Requirements
+
+- **Constructor** `RangeSumQuery(int[] numbers)`
+  - Throw `ArgumentNullException` if `numbers` is `null`.
+  - Loop over `numbers` **once** (O(n)) and save whatever you need in a field.
+- **`SumRange(int left, int right)`**
+  - Throw `ArgumentOutOfRangeException` if `left < 0`, `right >= numbers.Length`, or `left > right`.
+  - Return the inclusive sum in **O(1)**: no loops.
+  - Return a `long`. Three `int.MaxValue`s added together overflow an `int`, and a test checks for that.
+
+<details><summary>Hint 1: the idea</summary>
+
+Suppose you already knew the "running total" at every position, meaning the sum of everything *before* it.
+The sum of the range `[left, right]` is then:
+
+> (total of everything up to and including `right`) − (total of everything before `left`)
+
+The part before `left` gets cancelled out, and only the range you want is left.
+</details>
+
+<details><summary>Hint 2: the prefix array, concretely</summary>
+
+Build `prefix` with length `numbers.Length + 1`, where `prefix[i]` is the sum of the first `i` elements:
+
+```
+index:     0   1   2   3   4   5   6
+numbers: [-2,  0,  3, -5,  2, -1]
+prefix:  [ 0, -2, -2,  1, -4, -2, -3]
+```
+
+- `prefix[0] = 0` (sum of zero elements)
+- `prefix[i + 1] = prefix[i] + numbers[i]`
+
 Then `SumRange(l, r) = prefix[r + 1] - prefix[l]`.
+
+Check it: `SumRange(2, 5) = prefix[6] - prefix[2] = -3 - (-2) = -1` ✔
+
+The extra leading `0` means `SumRange(0, r)` needs no special case. Make the array `long[]` so the running
+totals can't overflow.
 </details>
 
 ### Exercise 04 — Classify the complexity
