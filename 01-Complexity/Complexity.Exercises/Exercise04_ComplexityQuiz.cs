@@ -18,13 +18,13 @@ public enum BigO
 public static class ComplexityQuiz
 {
     // int First(int[] items) => items[0];
-    public static BigO SnippetA() => throw new NotImplementedException();
+    public static BigO SnippetA() => BigO.Constant;
 
     // int CountHalvings(int n) { int steps = 0; while (n > 1) { n /= 2; steps++; } return steps; }
-    public static BigO SnippetB() => throw new NotImplementedException();
+    public static BigO SnippetB() => BigO.Logarithmic;
 
     // long Sum(int[] items) { long total = 0; foreach (var x in items) total += x; return total; }
-    public static BigO SnippetC() => throw new NotImplementedException();
+    public static BigO SnippetC() => BigO.Linear;
 
     // int CountEqualPairs(int[] items)
     // {
@@ -34,7 +34,7 @@ public static class ComplexityQuiz
     //             if (i != j && items[i] == items[j]) count++;
     //     return count;
     // }
-    public static BigO SnippetD() => throw new NotImplementedException();
+    public static BigO SnippetD() => BigO.Quadratic;
 
     // long Work(int n)
     // {
@@ -43,10 +43,10 @@ public static class ComplexityQuiz
     //         for (int j = 1; j < n; j *= 2) work++;
     //     return work;
     // }
-    public static BigO SnippetE() => throw new NotImplementedException();
+    public static BigO SnippetE() => BigO.Linearithmic;
 
     // long Fib(int n) => n < 2 ? n : Fib(n - 1) + Fib(n - 2);
-    public static BigO SnippetF() => throw new NotImplementedException();
+    public static BigO SnippetF() => BigO.Exponential;
 
     // int Range(int[] items)
     // {
@@ -55,7 +55,7 @@ public static class ComplexityQuiz
     //     foreach (var x in items) min = Math.Min(min, x);
     //     return max - min;
     // }
-    public static BigO SnippetG() => throw new NotImplementedException();
+    public static BigO SnippetG() => BigO.Linear;
 
     // long Work(int n)
     // {
@@ -64,12 +64,12 @@ public static class ComplexityQuiz
     //         for (int j = 0; j < 100; j++) work++;
     //     return work;
     // }
-    public static BigO SnippetH() => throw new NotImplementedException();
+    public static BigO SnippetH() => BigO.Linear;
 
     // bool HasDivisor(int n)
     // {
     //     for (int d = 2; d * d <= n; d++) if (n % d == 0) return true;
     //     return false;
     // }
-    public static BigO SnippetI() => throw new NotImplementedException();
+    public static BigO SnippetI() => BigO.SquareRoot;
 }
