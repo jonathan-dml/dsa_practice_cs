@@ -8,6 +8,13 @@ public static class PrimeCheck
 {
     public static bool IsPrime(long n)
     {
-        throw new NotImplementedException();
+        if(n < 2)
+            return false;
+        for(long i = 2; i * i <= n; i++)
+        {
+            if(n % i == 0)
+                return false;
+        }
+        return true;
     }
 }
