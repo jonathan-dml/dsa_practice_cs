@@ -7,6 +7,11 @@ public static class Factorial
 {
     public static long Compute(int n)
     {
-        throw new NotImplementedException();
+        if(n > 20 || n < 0)
+            throw new ArgumentOutOfRangeException(nameof(n));
+
+        if(n == 0)
+            return 1;
+        return n * Compute(n-1);
     }
 }
